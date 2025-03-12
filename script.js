@@ -9,7 +9,8 @@ document.querySelector('.check').addEventListener('click',function() {
         document.querySelector('.message').textContent='   No Number...';
 
     }
-    else if(guess===secretNumber){
+         
+    else if(guess===secretNumber){ //  The Guess Is Correct
         document.querySelector('.message').textContent = 'Correct Guess';
         document.querySelector('.number').textContent=secretNumber;
         document.querySelector('.game').textContent= 'You Won The Game 🏆'
@@ -20,7 +21,8 @@ document.querySelector('.check').addEventListener('click',function() {
             document.querySelector('.highscore').textContent = highscore;
         }
     }
-    else if(guess>secretNumber){
+         
+    else if(guess>secretNumber){ // The Guess Is Greater Than SecretNumber
         if(score>1){
         document.querySelector('.message').textContent = ' 📈 To High';
     score--;
@@ -31,7 +33,8 @@ document.querySelector('.check').addEventListener('click',function() {
         document.querySelector('.score').textContent = 0;
         
     }}
-    else if(guess<secretNumber){
+      
+    else if(guess<secretNumber){     // The Guess Is Less Than SecretNumber
         if(score>1){
         document.querySelector('.message').textContent = ' 📉 To Low';
     score--;
@@ -45,7 +48,8 @@ document.querySelector('.check').addEventListener('click',function() {
 
 
 })
-document.querySelector('.again').addEventListener('click',function(){
+ 
+document.querySelector('.again').addEventListener('click',function(){ // To Reset Or Play The Game Again Where The Highscore Remain Same in Again Play
     score = 20;
   secretNumber = Math.trunc(Math.random()*20) + 1;
   document.querySelector('.message').textContent = 'Start Guessing';
