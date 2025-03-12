@@ -9,7 +9,7 @@ document.querySelector('.check').addEventListener('click',function() {
         document.querySelector('.message').textContent='   No Number...';
 
     }  
-         
+          
     else if(guess===secretNumber){ //  The Guess Is Correct
         document.querySelector('.message').textContent = 'Correct Guess';
         document.querySelector('.number').textContent=secretNumber;
